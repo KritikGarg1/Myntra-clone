@@ -16,8 +16,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   Completer<WebViewController> _controller = Completer<WebViewController>();
-  String str="initial";
-  str+="add";
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
