@@ -14,6 +14,44 @@ class MyApp extends StatefulWidget {
   //New State
   //Additional state change here
 }
+class _MyAppState extends State<MyApp> {
+  Completer<WebViewController> _controller = Completer<WebViewController>();
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body:  SafeArea(
+          child: WebView(
+            initialUrl: 'https://www.myntra.com/',
+            javascriptMode: JavascriptMode.unrestricted,
+            onWebViewCreated: (WebViewController webViewController) {
+              _controller.complete(webViewController);},
+          ),
+        ),
+      ),
+    );
+  }
+}
+class _MyAppState extends State<MyApp> {
+  Completer<WebViewController> _controller = Completer<WebViewController>();
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body:  SafeArea(
+          child: WebView(
+            initialUrl: 'https://www.myntra.com/',
+            javascriptMode: JavascriptMode.unrestricted,
+            onWebViewCreated: (WebViewController webViewController) {
+              _controller.complete(webViewController);},
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 class _MyAppState extends State<MyApp> {
   Completer<WebViewController> _controller = Completer<WebViewController>();
